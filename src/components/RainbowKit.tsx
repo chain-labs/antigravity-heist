@@ -6,7 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { pulsechain, baseSepolia, base, sepolia } from "viem/chains";
 import { WagmiProvider, http } from "wagmi";
 const pulseChain = {
-  ...pulsechain,
+  ...pulsechain, 
   iconUrl:
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCuUifRyi_k3LEVGmTLdl5keon5NALvBHHqITJYAtBGw&s",
 };
