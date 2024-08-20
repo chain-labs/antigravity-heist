@@ -42,18 +42,6 @@ const nextConfig = {
     ],
     dangerouslyAllowSVG: true,
   },
-  async rewrites() {
-    return [
-      {
-        source: "/test/api/:path*",
-        destination: `${TEST_API_ENDPOINT}/api/:path*`,
-      },
-      {
-        source: "/api/:path*",
-        destination: `${API_ENDPOINT}/api/:path*`,
-      },
-    ];
-  },
 };
 
 export default nextConfig;
