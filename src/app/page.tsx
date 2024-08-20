@@ -60,7 +60,7 @@ export default function Home() {
       return;
     }
 
-    if (Number(victimDetails.amount) >= data.stealAmount) {
+    if (Number(victimDetails.amount) < data.stealAmount) {
       toast.error("Victim has no more funds to steal!");
       reset();
       return;

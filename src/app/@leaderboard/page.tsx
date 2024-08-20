@@ -86,7 +86,7 @@ export default function Leaderboard() {
         return {
           id: index + 1,
           address: user.address,
-          amount: Number(formatUnits(BigInt(user.totalMined), 18)).toFixed(2),
+          amount: formatUnits(BigInt(user.totalMined), 18),
           amountStolen: user.heistConducted.reduce(
             (acc, heist) => acc + Number(heist),
             0,
@@ -134,7 +134,7 @@ export default function Leaderboard() {
                   <PiCopyDuotone />
                 </td>
                 <td className="border px-4 py-2 text-[24px] leading-[32px] font-extrabold text-agyellow">
-                  {formattingNumber(Number(entry.amount))}
+                  {formattingNumber(Number(Number(entry.amount).toFixed(2)))}
                 </td>
                 <td className="border px-4 py-2">
                   {formattingNumber(Number(entry.amountStolen))}
